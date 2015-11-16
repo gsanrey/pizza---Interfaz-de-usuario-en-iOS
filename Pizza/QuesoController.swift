@@ -27,16 +27,18 @@ class QuesoController: UIViewController {
         let sigVista = segue.destinationViewController as! IngredientesController
         switch (self.que.selectedSegmentIndex){
         case 0:
-            sigVista.etam = "MOZZARELLA"
+            sigVista.eque = "MOZZARELLA"
         case 1:
-            sigVista.etam = "CHEDDAR"
+            sigVista.eque = "CHEDDAR"
         case 2:
-            sigVista.etam = "PARMESANO"
+            sigVista.eque = "PARMESANO"
         case 3:
-            sigVista.etam = "SIN QUESO"
+            sigVista.eque = "SIN QUESO"
         default:
             print("error")
         }
+        sigVista.emas = self.emas
+        sigVista.etam = self.etam
     }
 
     override func didReceiveMemoryWarning() {

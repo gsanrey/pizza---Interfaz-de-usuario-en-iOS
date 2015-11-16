@@ -27,14 +27,15 @@ class TipoController: UIViewController {
         let sigVista = segue.destinationViewController as! QuesoController
         switch (self.tip.selectedSegmentIndex){
         case 0:
-            sigVista.etam = "DELGADA"
+            sigVista.emas = "DELGADA"
         case 1:
-            sigVista.etam = "CRUJIENTE"
+            sigVista.emas = "CRUJIENTE"
         case 2:
-            sigVista.etam = "GRUESA"
+            sigVista.emas = "GRUESA"
         default:
             print("error")
         }
+        sigVista.etam = self.etam
     }
 
     override func didReceiveMemoryWarning() {

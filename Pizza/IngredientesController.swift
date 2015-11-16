@@ -28,6 +28,32 @@ class IngredientesController: UIViewController {
         }
     }
     
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let sigVista = segue.destinationViewController as! EleccionController
+        /*
+        switch (self.que.selectedSegmentIndex){
+        case 0:
+            sigVista.etam = "MOZZARELLA"
+        case 1:
+            sigVista.etam = "CHEDDAR"
+        case 2:
+            sigVista.etam = "PARMESANO"
+        case 3:
+            sigVista.etam = "SIN QUESO"
+        default:
+            print("error")
+        }*/
+        if self.ipiña == 1{
+            sigVista.eing[0] = "PIÑA"
+        }
+        sigVista.emas = self.emas
+        sigVista.eque = self.eque
+        sigVista.etam = self.etam
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
